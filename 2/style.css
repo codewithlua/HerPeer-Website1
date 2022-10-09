@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap');
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* font-family: 'Oswald', sans-serif; */
+        /* font-family: 'Edu QLD Beginner', cursive; */
+        font-family: 'Gemunu Libre', sans-serif;
+
+}
+
+:root{
+        
+}
+
+nav {
+        display: flex;
+        height: 60px;
+        width: 100%;
+        background: #fff;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.295);
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 50px 0 100px;
+        flex-wrap: wrap;
+}
+
+nav .logo {
+        color: #000;
+        font-size: 35px;
+        font-weight: 600;
+}
+
+nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+}
+
+nav ul li {
+        margin: 0 5px;
+}
+
+nav ul li a {
+        color: #000;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 8px 15px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+        color: #111;
+        background: #fff;
+}
+
+nav .menu-btn i {
+        color: #000;
+        font-size: 22px;
+        cursor: pointer;
+        display: none;
+}
+
+input[type="checkbox"] {
+        display: none;
+}
+
+@media (max-width: 1000px) {
+        nav {
+                padding: 0 40px 0 50px;
+        }
+}
+
+@media (max-width: 920px) {
+        nav .menu-btn i {
+                display: block;
+        }
+
+        #click:checked~.menu-btn i:before {
+                content: "\f00d";
+        }
+
+        nav ul {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                background: #fff;
+                height: 100vh;
+                width: 100%;
+                text-align: center;
+                display: block;
+                transition: all 0.3s ease;
+        }
+
+        #click:checked~ul {
+                left: 0;
+        }
+
+        nav ul li {
+                width: 100%;
+                margin: 40px 0;
+        }
+
+        nav ul li a {
+                width: 100%;
+                margin-left: -100%;
+                display: block;
+                font-size: 20px;
+                transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        #click:checked~ul li a {
+                margin-left: 0px;
+        }
+
+        nav ul li a.active,
+        nav ul li a:hover {
+                background: none;
+                color: cyan;
+        }
+}
+
+.content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: -1;
+        width: 100%;
+        padding: 0 30px;
+        color: #1b1b1b;
+}
+
+.content div {
+        font-size: 40px;
+        font-weight: 700;
+}
+
+.hero1{
+        display: flex;
+        justify-content: space-around;
+        padding: 50px;
+        top: 20px;
+        gap: 20px;
+}
+
+.hero1-col img{
+        width: 350px;
+        height: 350px;
+        border: 6px solid rgb(122, 26, 247);
+        border-radius: 10px;
+}
+
+.hero1-col .text{
+padding-top: 30px;
+width: 80%;
+padding-left: 30px;
+}
+
+.hero1-col .text h1{
+        color: black;
+        font-size: 35px;
+        font-family: 'Edu QLD Beginner', cursive;
+}
+
+.hero1-col .text h1 span{
+        color: rgb(122, 26, 247);
+        font-size: 40px;
+}
+
+.hero1-col .text p{
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+color: rgba(0, 0, 0, 0.89);
+font-size: 14px;
+}
+
+.hero1-col .text button{
+        background-color:rgb(122, 26, 247);
+        padding: 10px;
+        color: white;
+        border: none;
+        font-family: 'Edu QLD Beginner', cursive;
+}
+
+.hero1-col .text .btn1{
+        background-color: transparent;
+        color: black;
+        border: 2px solid #000;
+}
+
+@media screen and (max-width: 500px) {
+        .hero1{
+                display: block;
+        }
+        .hero1-col img {
+                        width: 300px;
+                        height: 300px;
+                        border: 6px solid rgb(122, 26, 247);
+                        border-radius: 10px;
+                        margin-top: 20px;
+                }
+        
+         .hero1-col .text {
+                        padding-top: 30px;
+                        width: 100%;
+                        padding-left: 10px;
+                }
+}
+
+/* Hero Sectiion Done */
+
+.about{
+        text-align: center;
+        width: auto;
+        height: auto;
+        padding-top: 100px;
+}
+
+.about p{
+        margin-left: 200px;
+        margin-right: 200px;
+}
+
+.about p {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgba(0, 0, 0, 0.89);
+        font-size: 14px;
+}
+
+.about h1 {
+        color: black;
+        font-size: 40px;
+}
+
+.about button{
+background-color: rgb(122, 26, 247);
+        padding: 10px;
+        color: white;
+        border: none;
+}
+
+@media screen and (max-width: 500px) {
+.about p {
+                margin-left: 0px;
+                margin-right: 0px;
+                padding: 20px;
+        }
+}
+
+/*END of about section*/
+
+.joinbox{
+background-color: white;
+margin-top: 50px;
+width: 100%;
+display: flex;
+justify-content: space-around;
+
+}
+
+.Join {
+        width: 85%;
+        height: 70vh;
+        display: flex;
+        justify-content: space-around;
+        padding: 60px;
+        top: 20px;
+        border-radius: 10px;
+        gap: 40px;
+        background-color: rgb(122, 26, 247);
+}
+
+.Join-col img {
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+        border: 5px solid rgb(122, 26, 247);
+}
+
+.Join-col p{
+        font-size: 14px;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Join-col .text h1{
+        font-size: 35px;
+        font-family: 'Gemunu Libre', sans-serif;
+        padding-top: 20px;
+        color: white;
+}
+
+.Join-col .text button {
+        background-color: #fff;
+        padding: 10px;
+        color: black;
+        border: 2px solid black;
+        font-family: 'Edu QLD Beginner', cursive;
+}
+
+@media screen and (max-width: 500px) {
+       .Join{
+        display: block;
+        height: 100vh;
+       } 
+       .joinbox{
+        height: 130vh;
+       }
+       .Join-col p {
+        text-align: left;
+               font-size: 14px;
+               color: white;
+               font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       }
+
+       .Join-col .text h1 {
+        text-align: left;
+               font-size: 35px;
+               font-family: 'Gemunu Libre', sans-serif;
+               padding-top: 20px;
+               color: white;
+       }
+
+       .Join-col img {
+        margin-top: 20px;
+        margin-left: -40px;
+               width: 300px;
+               height: 300px;
+               border-radius: 10px;
+               border: 5px solid rgb(122, 26, 247);
+       }
+}
+
+/*End of Join section*/
+
+.support{
+        height: 50vh;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+}
+
+.sup .supporth1{
+        text-align: center;
+        font-size: 35px;
+        font-family: 'Gemunu Libre', sans-serif;
+        padding-top: 20px;
+        color: black;
+}
+
+
+
+.supporters{
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+}
+
+.supporters-col
+{
+        text-align: left;
+}
+
+.supporters-col1 {
+        text-align: left;
+}
+
+.supporters-col p a{
+        text-decoration: underline;
+        color: black;
+        padding: 25px;
+        font-size: 20px;
+}
+
+.supporters-col1 p a {
+        text-decoration: underline;
+        color: black;
+        font-size: 20px;
+}
+
+@media screen and (max-width: 500px) {
+.supporters {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                width: 90%;
+        }
+}
+
+/* End of supporters section*/
+
+.num{
+        display: flex;
+        justify-content: space-around;
+        height: 50vh;
+}
+
+.numh1{
+        font-size: 40px;
+        text-align: center;
+}
+
+.number{
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        width: 88%;
+        height: 40vh;
+        background-color: #000;
+        color: white;
+        border-radius: 10px;
+}
+
+.number-col {
+padding-top: 40px;
+text-align: center;
+}
+
+.number-col p{
+        padding-top: 5px;
+        font-size: 35px;
+}
+
+.number-col .NP{
+        font-size: 21px;
+        color: rgb(221, 26, 247);
+}
+
+@media screen and (max-width: 500px) {
+        .num{
+        height: 110vh;
+        }
+        .number{
+        display: grid;
+        grid-template-columns: auto auto;
+        height: 80vh;
+        }
+        .number-col {
+         padding-top: 40px;
+        text-align: center;
+                }
+        .number-col .NP{
+        font-size: 18px;
+        }
+}
+
+/*End of number section*/
+
+.imp .imph1{
+text-align: center;
+font-size: 40px;
+padding: 20px;
+}
+.impact1{
+        display: flex;
+        justify-content: space-around;
+        padding: 50px;
+        gap: 30px;
+}
+
+.impact1-col img{
+        width: 400px;
+        height: 300px;
+        border-radius: 10px;
+        border-left: 5px solid black;
+        border-bottom: 5px solid black;
+}
+
+@media screen and (max-width: 500px) {
+        .impact1{
+                display: block;
+                height: 120vh;
+        }
+       .impact1-col img {
+                 width: 300px;
+                 height: 300px;
+                 border-radius: 10px;
+                border-left: 5px solid black;
+                 border-bottom: 5px solid black;
+                 margin-bottom: 15px;
+                 margin-top: 10px;
+                }
+        .impact1-col h1{
+                padding-top: 10px;
+        }
+        .impact1-col h2{
+                font-size: 35px;
+                padding-bottom: 10px;
+                color: darkorchid;
+        }
+        .impact1-col button {
+         padding: 6px;
+         background-color: white;
+         color: black;
+         font-size: 15px;
+        };
+}
+
+/*End of impact section*/
+
+.part{
+        display: flex;
+        justify-content: space-around;
+        height: 80vh;
+}
+
+.partner{
+        display: flex;
+        justify-content: space-around;
+}
+
+.partner .partner-col{
+        background-color: #000;
+        width: 50%;
+        height: 70vh;
+        color: white;
+        padding: 40px;
+}
+
+.partner-col h1{
+        font-size: 40px;
+}
+.partner-col p{
+line-height: 20px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.partner-col button{
+        padding: 15px;
+        background-color: white;
+}
+
+.partner .partner-col1{
+        background-color: darkorchid;
+        width: 50%;
+        height: 70vh;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-around;
+}
+
+.partner-col1 img{
+        width: 140px;
+        border:  4px solid white;
+        border-radius: 2px;
+}
+
+@media screen and (max-width: 500px) {
+  .part{
+        margin-top: 40px;
+  }
+  .partner{
+        display: block;
+        height: 150vh;
+  }   
+  .partner .partner-col {
+          background-color: #000;
+          width: 100%;
+          height: 70vh;
+          color: white;
+          padding: 40px;
+  }
+  .partner .partner-col1 {
+          background-color: darkorchid;
+          width: 100%;
+          height: 70vh;
+          padding: 40px;
+          display: grid;
+          grid-template-columns: auto auto;
+          justify-content: space-around;
+  }
+}
